@@ -21,6 +21,9 @@ return array(
         'application.extensions.lightopenid.*',
         'application.extensions.eauth.*',
         'application.extensions.eauth.services.*',
+        'application.extensions.gmap.*',
+        'application.extensions.gmap.assets.*',
+        'application.extensions.gmap.kml.*',
 	),
 
 	'modules'=>array(
