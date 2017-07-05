@@ -7,7 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'G\'Mana',
+	'theme'=>'listeo',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -40,6 +41,16 @@ return array(
 
 	// application components
 	'components'=>array(
+        'clientScript'=>array(
+            'scriptMap'=>array(
+                'jquery.js'=>false,
+            ),
+            'packages'=>array(
+                'jquery'=>false
+            ),
+            'coreScriptPosition' => CClientScript::POS_END,
+            'defaultScriptFilePosition' => CClientScript::POS_END,
+        ),
 
 		'user'=>array(
 			// enable cookie-based authentication
