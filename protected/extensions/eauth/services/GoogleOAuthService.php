@@ -33,9 +33,9 @@ class GoogleOAuthService extends EOAuth2Service {
 
 	protected function fetchAttributes() {
 		$info = (array)$this->makeSignedRequest('https://www.googleapis.com/oauth2/v1/userinfo');
-
 		$this->attributes['id'] = $info['id'];
 		$this->attributes['name'] = $info['name'];
+		$this->attributes['picture'] = $info['picture'];
 
 		if (!empty($info['link'])) {
 			$this->attributes['url'] = $info['link'];

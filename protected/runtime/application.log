@@ -503,3 +503,137 @@ Stack trace:
 #21 {main}
 REQUEST_URI=/Gemana/index.php?r=site/login
 ---
+2017/07/06 18:46:01 [error] [application.extensions.eauth] Invalid response http code: 400.
+URL: https://accounts.google.com/o/oauth2/token
+Options: array (
+  'data' => 
+  array (
+    'client_id' => '556713178459-8ip3h08otlbigaoe18ic626ehdsde0ao.apps.googleusercontent.com',
+    'client_secret' => 'aXnFxehBKjzJnGNGSPqudbua',
+    'grant_type' => 'authorization_code',
+    'code' => '4/Oqun3dPTGWmjXN-sxqO9w7paQi3pdkJgTBnHoPh2XUY',
+    'redirect_uri' => 'http://localhost/Gemana/index.php?r=site/login&service=google_oauth',
+  ),
+  'query' => 
+  array (
+    'alt' => 'json',
+  ),
+)
+Result: {
+  "error" : "invalid_grant",
+  "error_description" : "Code was already redeemed."
+}
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php (278)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (102)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (78)
+2017/07/06 18:46:06 [error] [application.extensions.eauth] Invalid response http code: 403.
+URL: https://www.googleapis.com/plus/v1/people/me
+Options: array (
+  'query' => 
+  array (
+    'access_token' => 'ya29.Glt_BHMoY3hDohMdrNZ69nsWetydCuU0cI5dRDCP_J4arhUXt0nOVpfT43FTKnC8FsR71LFIJlmIFhgpaHSSbFwxMSI6LH0qjxWDISDWE-bxoWmfGpZiOpWDENzL',
+    'alt' => 'json',
+  ),
+)
+Result: {
+ "error": {
+  "errors": [
+   {
+    "domain": "usageLimits",
+    "reason": "accessNotConfigured",
+    "message": "Access Not Configured. Google+ API has not been used in project 556713178459 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+    "extendedHelp": "https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459"
+   }
+  ],
+  "code": 403,
+  "message": "Access Not Configured. Google+ API has not been used in project 556713178459 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+ }
+}
+
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php (278)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (102)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EOAuth2Service.php (214)
+2017/07/06 18:55:12 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login&service=google_oauth&code=4/cDcvIFAItnVXgM5sZYjNLLH5lwozT--tvRrkeiCzETc
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php (107)
+in C:\xampp\htdocs\Gemana\index.php (13)
+2017/07/06 18:55:35 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#2 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (72)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php (63)
+2017/07/06 18:56:09 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#2 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (72)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php (63)
+2017/07/06 18:58:26 [error] [exception.CHttpException.404] CHttpException: Unable to find the code you requested. in C:\xampp\htdocs\yii\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('code')
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/code')
+#6 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Gemana/index.php?r=gii/model/code&id=0
+HTTP_REFERER=http://localhost/Gemana/index.php?r=gii/model/index
+---
+2017/07/06 19:05:01 [error] [exception.Error] Error: Class 'UserCustom' not found in C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php:121
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#6 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login&service=google_oauth&code=4/gadNbRvmwfM9GfrOUTmQe9BIhk44Cds0gKsOREUMhK4
+---
