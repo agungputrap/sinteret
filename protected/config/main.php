@@ -88,6 +88,7 @@ return array(
                 'google_oauth' => array(
                     // register your app here: https://code.google.com/apis/console/
                     'class' => 'GoogleOAuthService',
+//                    'class' => 'application.extensions.eauth.EAuthcustom_services.CustomGoogleService',
                     'client_id' => '556713178459-8ip3h08otlbigaoe18ic626ehdsde0ao.apps.googleusercontent.com',
                     'client_secret' => 'aXnFxehBKjzJnGNGSPqudbua',
                     'title' => 'Google (OAuth)',

@@ -32,15 +32,7 @@ class FacebookOAuthService extends EOAuth2Service {
 	);
 
 	protected function fetchAttributes() {
-		$info = (object)$this->makeSignedRequest('https://graph.facebook.com/v2.8/me', array(
-			'query' => array(
-				'fields' => join(',', array(
-					'id',
-					'name',
-					'link',
-				))
-			)
-		));
+		$info = (object)$this->makeSignedRequest('https://graph.facebook.com/me');
 
 		$this->attributes['id'] = $info->id;
 		$this->attributes['name'] = $info->name;
@@ -70,7 +62,8 @@ class FacebookOAuthService extends EOAuth2Service {
 
 	protected function getAccessToken($code) {
 		$response = $this->makeRequest($this->getTokenUrl($code), array(), false);
-		return json_decode($response, true);
+		parse_str($response, $result);
+		return $result;
 	}
 
 	/**
@@ -80,7 +73,7 @@ class FacebookOAuthService extends EOAuth2Service {
 	 */
 	protected function saveAccessToken($token) {
 		$this->setState('auth_token', $token['access_token']);
-		$this->setState('expires', isset($token['expires_in']) ? time() + (int)$token['expires_in'] - 60 : 0);
+		$this->setState('expires', isset($token['expires']) ? time() + (int)$token['expires'] - 60 : 0);
 		$this->access_token = $token['access_token'];
 	}
 
