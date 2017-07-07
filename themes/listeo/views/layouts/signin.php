@@ -6,7 +6,6 @@
  * Time: 2:19 PM
  */
 ?>
-
 <!-- Sign In Popup -->
 <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
     <div class="small-dialog-header">
@@ -17,7 +16,7 @@
         <!-- Login -->
         <div class="tab-content" id="tab1" style="display: none;">
             <p class="text-center">
-                <a href="/Gemana/index.php?r=site/login&service=google_oauth">
+                <a href="#" onClick="MyWindow=window.open('/Gemana/index.php?r=site/login&service=google_oauth','MyWindow','width=450,height=380'); return false;">
                     <img class="footer-logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/btn-google.png" alt="">
                 </a>
             </p>

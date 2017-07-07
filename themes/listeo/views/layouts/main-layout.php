@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- CSS
     ================================================== -->
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/css/colors/main.css" id="colors">
     <link rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/favicon.ico" type="image/x-icon">
@@ -208,7 +209,6 @@
 
 <!-- Scripts
 ================================================== -->
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/jquery-2.2.0.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/jpanelmenu.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/chosen.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/slick.min.js"></script>
