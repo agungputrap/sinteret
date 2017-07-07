@@ -40,9 +40,10 @@ The implementation of the authorization on your own server has several advantage
 ### Included services:
 
 * OpenID:
+	* Google
 	* Yahoo
 	* Steam
-	* Wargaming
+	* Yandex (ru)
 * OAuth1:
 	* Twitter
 	* LinkedIn
@@ -57,7 +58,6 @@ The implementation of the authorization on your own server has several advantage
 	* Odnoklassniki (ru)
 	* Moi Krug(ru)
 	* Dropbox
-	* EVE Online
 
 
 ### Resources
@@ -108,6 +108,14 @@ The implementation of the authorization on your own server has several advantage
 			'cache' => false, // Cache component name or false to disable cache. Defaults to 'cache'.
 			'cacheExpire' => 0, // Cache lifetime. Defaults to 0 - means unlimited.
 			'services' => array( // You can change the providers and their classes.
+				'google' => array(
+					'class' => 'GoogleOpenIDService',
+					//'realm' => '*.example.org',
+				),
+				'yandex' => array(
+					'class' => 'YandexOpenIDService',
+					//'realm' => '*.example.org',
+				),
 				'steam' => array(
 					'class' => 'SteamOpenIDService',
 					//'realm' => '*.example.org',
@@ -115,9 +123,6 @@ The implementation of the authorization on your own server has several advantage
 				'yahoo' => array(
 					'class' => 'YahooOpenIDService',
 					//'realm' => '*.example.org',
-				),
-				'wargaming' => array(
-					'class' => 'WargamingOpenIDService'
 				),
 				'twitter' => array(
 					// register your app here: https://dev.twitter.com/apps/new
@@ -191,25 +196,11 @@ The implementation of the authorization on your own server has several advantage
 					'title' => 'Odnokl.',
 				),
 				'dropbox' => array(
-					// register your app here: https://www.dropbox.com/developers/apps/create
-					'class' => 'DropboxOAuthService',
-					'client_id' => '...',
-					'client_secret' => '...',
-				),
-				'eve' => array(
-					// register your app here: https://developers.eveonline.com/applications
-					'class' => 'EveOnlineOAuthService',
-					'client_id' => '...',
-					'client_secret' => '...',
-				),
-				'slack' => array(
-					// register your app here: https://api.slack.com/applications/new
-					'class' => 'SlackOAuthService',
-					'client_id' => '...',
-					'client_secret' => '...',
-					'title' => 'Slack',
-				),
-
+                	// register your app here: https://www.dropbox.com/developers/apps/create
+                	'class' => 'DropboxOAuthService',
+                		'client_id' => '...',
+                		'client_secret' => '...',
+                ),
 			),
 		),
 		...

@@ -1,21 +1,6 @@
 Yii EAuth Change Log
 ====================
 
-### 10.04.2017 (v1.2.0)
-* Fix parsing access token in Facebook OAuth service (#109 #110 #111)
-* Use the latest Graph Api v2.8 for Facebook 
-* Remove old unavailable OpenID servers (Google and Yandex)
-
-### 03.01.2016 (v1.1.0)
-* Use the latest Graph Api v2.5 for Facebook (#107)
-
-### 23.01.2015 (v1.0.0)
-* Added Slack OAuth service
-
-### 19.11.2014
-* Added EVE Online OAuth service
-* Added Wargamin Open ID service
-
 ### 11.03.2014
 * Removed CURLOPT_SSL_VERIFYPEER=0 (#82)
 

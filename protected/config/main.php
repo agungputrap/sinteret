@@ -16,6 +16,7 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
+        'application.models.customs.*',
 		'application.components.*',
         'application.extensions.eoauth.*',
         'application.extensions.eoauth.lib.*',
@@ -29,14 +30,12 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'12345',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		
 	),
 
 	// application components
@@ -88,6 +87,7 @@ return array(
                 'google_oauth' => array(
                     // register your app here: https://code.google.com/apis/console/
                     'class' => 'GoogleOAuthService',
+//                    'class' => 'application.extensions.eauth.EAuthcustom_services.CustomGoogleService',
                     'client_id' => '556713178459-8ip3h08otlbigaoe18ic626ehdsde0ao.apps.googleusercontent.com',
                     'client_secret' => 'aXnFxehBKjzJnGNGSPqudbua',
                     'title' => 'Google (OAuth)',

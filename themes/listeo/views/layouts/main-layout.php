@@ -9,6 +9,8 @@
     ================================================== -->
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/css/colors/main.css" id="colors">
+    <link rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/favicon.ico" type="image/x-icon">
 
 </head>
 

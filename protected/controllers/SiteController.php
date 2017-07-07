@@ -118,6 +118,8 @@ class SiteController extends Controller
 						// Save the attributes to display it in layouts/main.php
 						$session = Yii::app()->session;
 						$session['eauth_profile'] = $eauth->attributes;
+						$modelUser = new UserCustom();
+						$modelUser->saveUser($eauth->attributes);
 						// redirect and close the popup window if needed
 						$eauth->redirect();
 					}

@@ -637,3 +637,336 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/Gemana/index.php?r=gii
 ---
+2017/07/06 16:48:42 [error] [php] require_once(C:\xampp\htdocs\Gemana\protected\extensions\eauth/services/GoogleOpenIDService.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php:10)
+Stack trace:
+#0 unknown(0): autoload()
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(135): spl_autoload_call()
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity()
+#3 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#6 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (135)
+2017/07/06 16:52:17 [error] [exception.Error] Error: Class 'custom_services/CustomGoogleService' not found in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity(Array)
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.ext...', Array)
+#4 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): CBaseController->widget('application.ext...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): CController->render('login', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login
+---
+2017/07/06 16:52:23 [error] [exception.CException] CException: Alias "custom_services.CustomGoogleService" is invalid. Make sure it points to an existing directory or file. in C:\xampp\htdocs\yii\framework\YiiBase.php:348
+Stack trace:
+#0 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(131): YiiBase::import('custom_services...')
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity(Array)
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.ext...', Array)
+#5 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): CBaseController->widget('application.ext...', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#10 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): CController->render('login', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login
+---
+2017/07/06 16:52:48 [error] [php] require_once(C:\xampp\htdocs\Gemana\protected\extensions\eauth/services/GoogleOpenIDService.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php:10)
+Stack trace:
+#0 unknown(0): autoload()
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(135): spl_autoload_call()
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity()
+#3 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#6 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (135)
+2017/07/06 16:53:31 [error] [php] require_once(C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOpenIDService.php): failed to open stream: No such file or directory (C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php:10)
+Stack trace:
+#0 unknown(0): autoload()
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(135): spl_autoload_call()
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity()
+#3 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#6 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\custom_services\CustomGoogleService.php (10)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (135)
+2017/07/06 16:58:49 [error] [exception.CException] CException: Property "CustomGoogleService.client_id" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php(125): CComponent->__set('client_id', '556713178459-8i...')
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EOpenIDService.php(54): EAuthServiceBase->init(Object(EAuth), Array)
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(136): EOpenIDService->init(Object(EAuth), Array)
+#3 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity(Array)
+#4 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.ext...', Array)
+#7 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): CBaseController->widget('application.ext...', Array)
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#12 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): CController->render('login', Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login
+---
+2017/07/06 16:59:24 [error] [exception.CException] CException: Alias "application.extensions.eauth.EAuthWidget" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\xampp\htdocs\yii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#8 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): CController->render('login', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login
+---
+2017/07/06 17:00:01 [error] [exception.CException] CException: Property "CustomGoogleService.client_id" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php(125): CComponent->__set('client_id', '556713178459-8i...')
+#1 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EOpenIDService.php(54): EAuthServiceBase->init(Object(EAuth), Array)
+#2 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(136): EOpenIDService->init(Object(EAuth), Array)
+#3 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity(Array)
+#4 C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('application.ext...', Array)
+#7 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): CBaseController->widget('application.ext...', Array)
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#12 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): CController->render('login', Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login
+---
+2017/07/06 18:46:01 [error] [application.extensions.eauth] Invalid response http code: 400.
+URL: https://accounts.google.com/o/oauth2/token
+Options: array (
+  'data' => 
+  array (
+    'client_id' => '556713178459-8ip3h08otlbigaoe18ic626ehdsde0ao.apps.googleusercontent.com',
+    'client_secret' => 'aXnFxehBKjzJnGNGSPqudbua',
+    'grant_type' => 'authorization_code',
+    'code' => '4/Oqun3dPTGWmjXN-sxqO9w7paQi3pdkJgTBnHoPh2XUY',
+    'redirect_uri' => 'http://localhost/Gemana/index.php?r=site/login&service=google_oauth',
+  ),
+  'query' => 
+  array (
+    'alt' => 'json',
+  ),
+)
+Result: {
+  "error" : "invalid_grant",
+  "error_description" : "Code was already redeemed."
+}
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php (278)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (102)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (78)
+2017/07/06 18:46:06 [error] [application.extensions.eauth] Invalid response http code: 403.
+URL: https://www.googleapis.com/plus/v1/people/me
+Options: array (
+  'query' => 
+  array (
+    'access_token' => 'ya29.Glt_BHMoY3hDohMdrNZ69nsWetydCuU0cI5dRDCP_J4arhUXt0nOVpfT43FTKnC8FsR71LFIJlmIFhgpaHSSbFwxMSI6LH0qjxWDISDWE-bxoWmfGpZiOpWDENzL',
+    'alt' => 'json',
+  ),
+)
+Result: {
+ "error": {
+  "errors": [
+   {
+    "domain": "usageLimits",
+    "reason": "accessNotConfigured",
+    "message": "Access Not Configured. Google+ API has not been used in project 556713178459 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+    "extendedHelp": "https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459"
+   }
+  ],
+  "code": 403,
+  "message": "Access Not Configured. Google+ API has not been used in project 556713178459 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=556713178459 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+ }
+}
+
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthServiceBase.php (278)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\services\GoogleOAuthService.php (102)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EOAuth2Service.php (214)
+2017/07/06 18:55:12 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login&service=google_oauth&code=4/cDcvIFAItnVXgM5sZYjNLLH5lwozT--tvRrkeiCzETc
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php (107)
+in C:\xampp\htdocs\Gemana\index.php (13)
+2017/07/06 18:55:35 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#2 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (72)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php (63)
+2017/07/06 18:56:09 [error] [php] Undefined index: class (C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): EAuthWidget->init()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(180): SiteController->createWidget()
+#2 C:\xampp\htdocs\Gemana\protected\views\site\login.php(60): SiteController->widget()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php(155): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Gemana\index.php(13): CWebApplication->run()
+REQUEST_URI=/Gemana/index.php?r=site/login
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (127)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuth.php (72)
+in C:\xampp\htdocs\Gemana\protected\extensions\eauth\EAuthWidget.php (63)
+2017/07/06 18:58:26 [error] [exception.CHttpException.404] CHttpException: Unable to find the code you requested. in C:\xampp\htdocs\yii\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('code')
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/code')
+#6 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Gemana/index.php?r=gii/model/code&id=0
+HTTP_REFERER=http://localhost/Gemana/index.php?r=gii/model/index
+---
+2017/07/06 19:05:01 [error] [exception.Error] Error: Class 'UserCustom' not found in C:\xampp\htdocs\Gemana\protected\controllers\SiteController.php:121
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#6 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\Gemana\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Gemana/index.php?r=site/login&service=google_oauth&code=4/gadNbRvmwfM9GfrOUTmQe9BIhk44Cds0gKsOREUMhK4
+---
