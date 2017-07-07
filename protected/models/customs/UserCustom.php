@@ -23,11 +23,23 @@ class UserCustom extends User
     }
 
     public function saveUser($param) {
-        $this->google_id = $param['id'];
-        $this->nama = $param['name'];
-        $this->gambar = $param['picture'];
-        if($this->validate()) {
-            $this->save();
+        $isAlreadySave = $this->checkAlreadySave($param['id']);
+        if(!$isAlreadySave) {
+            $this->google_id = $param['id'];
+            $this->nama = $param['name'];
+            $this->gambar = $param['picture'];
+            if($this->validate()) {
+                $this->save();
+            }
+        }
+    }
+
+    public function checkAlreadySave($googleId) {
+        $modelUser = UserCustom::model()->findByAttributes(array('google_id'=>$googleId));
+        if($modelUser) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
