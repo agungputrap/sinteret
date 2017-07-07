@@ -53,7 +53,7 @@ class EGMapApiKeyList {
 		$this->addAPIKey( 'localhost', $this->_default );
 		
 		if( $domain != null && $key != null )
-			$this->add( $domain, $key );
+			$this->addAPIKey( $domain, $key );
 	}
 	/**
 	 * 
@@ -83,7 +83,7 @@ class EGMapApiKeyList {
 	 * Returns and google api key by domain name discovery
 	 * @return Google API key
 	 */
-	public static function guessAPIKey( )
+	public function guessAPIKey( )
 	{
 		if (isset($_SERVER['SERVER_NAME']))
 	    {
