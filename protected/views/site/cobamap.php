@@ -26,14 +26,14 @@ $gMap->setCenter(39.721089311812094, 2.91165944519042);
 $info_window_a = new EGMapInfoWindow('<div>I am a marker with custom image!</div>');
 $info_window_b = new EGMapInfoWindow('Hey! I am a marker with label!');
 
-$icon = new EGMapMarkerImage("http://google-maps-icons.googlecode.com/files/gazstation.png");
+// $icon = new EGMapMarkerImage("http://google-maps-icons.googlecode.com/files/gazstation.png");
 
-$icon->setSize(32, 37);
+/*$icon->setSize(32, 37);
 $icon->setAnchor(16, 16.5);
-$icon->setOrigin(0, 0);
+$icon->setOrigin(0, 0);*/
 
 // Create marker
-$marker = new EGMapMarker(39.721089311812094, 2.91165944519042, array('title' => 'Marker With Custom Image','icon'=>$icon));
+$marker = new EGMapMarker(39.721089311812094, 2.91165944519042);
 $marker->addHtmlInfoWindow($info_window_a);
 $gMap->addMarker($marker);
 

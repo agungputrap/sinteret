@@ -129,7 +129,9 @@
         <!-- Header / End -->
 
     </header>
-    <?php echo $content; ?>
+    <div class="container">
+        <?php echo $content; ?>
+    </div>
     <!-- Footer
     ================================================== -->
     <div id="footer" class="sticky-footer">
@@ -217,38 +219,14 @@
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/custom.js"></script>
+<!-- <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/protected/extensions/eauth/assets/js/auth.js"></script> -->
 
+<!-- Maps -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDJhgUHr15-NnoWV3kFBNNnaLlo8_oCI7Q&amp;language=en"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/infobox.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/markerclusterer.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/maps.js"></script>
 
-<!-- Style Switcher
-================================================== -->
-<script src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/switcher.js"></script>
-
-<div id="style-switcher">
-    <h2>Color Switcher <a href="#"><i class="sl sl-icon-settings"></i></a></h2>
-
-    <div>
-        <ul class="colors" id="color1">
-            <li><a href="#" class="main" title="Main"></a></li>
-            <li><a href="#" class="blue" title="Blue"></a></li>
-            <li><a href="#" class="green" title="Green"></a></li>
-            <li><a href="#" class="orange" title="Orange"></a></li>
-            <li><a href="#" class="navy" title="Navy"></a></li>
-            <li><a href="#" class="yellow" title="Yellow"></a></li>
-            <li><a href="#" class="peach" title="Peach"></a></li>
-            <li><a href="#" class="beige" title="Beige"></a></li>
-            <li><a href="#" class="purple" title="Purple"></a></li>
-            <li><a href="#" class="celadon" title="Celadon"></a></li>
-            <li><a href="#" class="red" title="Red"></a></li>
-            <li><a href="#" class="brown" title="Brown"></a></li>
-            <li><a href="#" class="cherry" title="Cherry"></a></li>
-            <li><a href="#" class="cyan" title="Cyan"></a></li>
-            <li><a href="#" class="gray" title="Gray"></a></li>
-            <li><a href="#" class="olive" title="Olive"></a></li>
-        </ul>
-    </div>
-
-</div>
-<!-- Style Switcher / End -->
 
 
 </body>
