@@ -314,6 +314,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/tooltips.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/scripts/custom.js"></script>
+<!-- <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/protected/extensions/eauth/assets/js/auth.js"></script> -->
 
 <!-- Maps -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDJhgUHr15-NnoWV3kFBNNnaLlo8_oCI7Q&amp;language=en"></script>
