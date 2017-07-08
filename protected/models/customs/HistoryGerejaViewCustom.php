@@ -42,7 +42,7 @@ class HistoryGerejaViewCustom extends HistoryGerejaView
             $gereja = array(
                 'gereja_id' => $setiap['gereja_id'],
                 'nama'=> $setiap['nama'],
-                'gambar'=> HistoryGerejaViewCustom::getPicForCarousel($setiap['gereja_id'])
+                'gambar'=> Yii::app()->baseUrl.'/images/gerejas/'.HistoryGerejaViewCustom::getPicForCarousel($setiap['gereja_id'])
             );
             array_push($hasil, $gereja);
         }

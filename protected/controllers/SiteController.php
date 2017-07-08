@@ -29,14 +29,30 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-        
+        $searchGereja = new SearchGerejaForm();
         $listCarousel = HistoryGerejaViewCustom::getTopViewedChurches();
-        $this->layout = '//layouts/main-layout';
-		$this->render('index', array(
-		    'listCarousel' => $listCarousel
-        ));
+        if(isset($_POST['SearchGerejaForm']) && isset($_POST['cari']))
+        {
+            $this->redirect(Yii::app()->createUrl('site/pencarian', array('kota'=>$_POST['SearchGerejaForm']['kota'])));
+        }
+        else {
+            $this->layout = '//layouts/main-layout';
+            $this->render('index', array(
+                'listCarousel' => $listCarousel,
+                'modelSearch' => $searchGereja
+            ));
+        }
 	}
 
+	public function actionPencarian($kota) {
+	 $modelPencarian = new SearchGerejaForm();
+	 $result = $modelPencarian->findGerejaByKota($kota);
+	 $this->layout = '//layouts/main-layout';
+	 $this->render('pencarian',array(
+	        'result'=>$result,
+            'modelSearch'=>$modelPencarian
+        ));
+    }
 	/**
 	 * This is the action to handle external exceptions.
 	 */

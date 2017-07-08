@@ -17,6 +17,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
         'application.models.customs.*',
+        'application.models.forms.*',
 		'application.components.*',
         'application.extensions.eoauth.*',
         'application.extensions.eoauth.lib.*',
