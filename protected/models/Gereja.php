@@ -9,11 +9,13 @@
  * @property integer $tipe_id
  * @property string $latitude
  * @property string $longitude
+ * @property string $kota
+ * @property string $alamat
  *
  * The followings are the available model relations:
+ * @property JadwalIbadah[] $jadwalIbadahs
  * @property FotoGereja[] $fotoGerejas
  * @property HistoryGerejaView[] $historyGerejaViews
- * @property JadwalIbadah[] $jadwalIbadahs
  * @property TipeGereja $tipe
  */
 class Gereja extends CActiveRecord
@@ -35,11 +37,12 @@ class Gereja extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('tipe_id', 'numerical', 'integerOnly'=>true),
-			array('nama', 'length', 'max'=>50),
+			array('nama, kota', 'length', 'max'=>50),
 			array('latitude, longitude', 'length', 'max'=>100),
+			array('alamat', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, tipe_id, latitude, longitude', 'safe', 'on'=>'search'),
+			array('id, nama, tipe_id, latitude, longitude, kota, alamat', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,9 +54,9 @@ class Gereja extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'jadwalIbadahs' => array(self::HAS_MANY, 'JadwalIbadah', 'gereja_id'),
 			'fotoGerejas' => array(self::HAS_MANY, 'FotoGereja', 'gereja_id'),
 			'historyGerejaViews' => array(self::HAS_MANY, 'HistoryGerejaView', 'gereja_id'),
-			'jadwalIbadahs' => array(self::HAS_MANY, 'JadwalIbadah', 'gereja_id'),
 			'tipe' => array(self::BELONGS_TO, 'TipeGereja', 'tipe_id'),
 		);
 	}
@@ -69,6 +72,8 @@ class Gereja extends CActiveRecord
 			'tipe_id' => 'Tipe',
 			'latitude' => 'Latitude',
 			'longitude' => 'Longitude',
+			'kota' => 'Kota',
+			'alamat' => 'Alamat',
 		);
 	}
 
@@ -95,6 +100,8 @@ class Gereja extends CActiveRecord
 		$criteria->compare('tipe_id',$this->tipe_id);
 		$criteria->compare('latitude',$this->latitude,true);
 		$criteria->compare('longitude',$this->longitude,true);
+		$criteria->compare('kota',$this->kota,true);
+		$criteria->compare('alamat',$this->alamat,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
