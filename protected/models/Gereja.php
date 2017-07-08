@@ -51,17 +51,10 @@ class Gereja extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-<<<<<<< HEAD
 			'fotoGerejas' => array(self::HAS_MANY, 'FotoGereja', 'gereja_id'),
 			'historyGerejaViews' => array(self::HAS_MANY, 'HistoryGerejaView', 'gereja_id'),
 			'jadwalIbadahs' => array(self::HAS_MANY, 'JadwalIbadah', 'gereja_id'),
 			'tipe' => array(self::BELONGS_TO, 'TipeGereja', 'tipe_id'),
-=======
-			'jadwalIbadahs' => array(self::HAS_MANY, 'JadwalIbadah', 'gereja_id'),
-			'fotoGerejas' => array(self::HAS_MANY, 'FotoGereja', 'gereja_id'),
-			'tipe' => array(self::BELONGS_TO, 'TipeGereja', 'tipe_id'),
-			'historyGerejaViews' => array(self::HAS_MANY, 'HistoryGerejaView', 'gereja_id'),
->>>>>>> fd73a2b04fc3b0f3631c8f322adb18424326c979
 		);
 	}
 
