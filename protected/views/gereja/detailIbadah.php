@@ -15,7 +15,6 @@ $this->breadcrumbs=array(
 
 	<div class="fs-inner-container content">
 		<div class="listing-item-image">
-			<a href=""><img src="<?php echo $fotoGereja; ?>"></a>
 			<?php echo CHtml::image($fotoGereja, 'nama gereja'); ?>
 		</div>
 		<div class="fs-content">
