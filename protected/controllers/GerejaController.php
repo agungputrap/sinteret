@@ -18,8 +18,10 @@ class GerejaController extends Controller
 			$jadwalIbadah = jadwalIbadah::model()->findAllByAttributes(array('gereja_id'=>$model->id));
 			$fotoGereja = FotoGereja::model()->findAllByAttributes(array('gereja_id'=>$model->id));
 
+			$fileFoto = Yii::app()->params['imageGereja'] . $fotoGereja[0]->nama_foto;
+
 			$data['jadwalIbadah'] = $jadwalIbadah;
-			$data['fotoGereja'] = $fotoGereja;
+			$data['fotoGereja'] = $fileFoto;
 		}
 
 		$data['model'] = $model;
