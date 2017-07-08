@@ -56,24 +56,23 @@
 
         <div class="col-md-12">
             <div class="row">
+                <?php foreach ($result as $setiap) {
+                    $imgSource = Yii::app()->baseUrl.'/images/gerejas/'.HistoryGerejaViewCustom::getPicForCarousel($setiap['id']);
+                ?>
                 <!-- Listing Item -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="listings-single-page.html" class="listing-item-container compact">
+                    <a href="<?php echo Yii::app()->createUrl('gereja/detail', array('id'=>$setiap['id']));?>" class="listing-item-container compact">
                         <div class="listing-item">
-                            <img src="images/listing-item-01.jpg" alt="">
-
-                            <div class="listing-badge now-open">Now Open</div>
-
+                            <img src="<?php echo $imgSource; ?>" alt="">
                             <div class="listing-item-content">
-                                <div class="numerical-rating" data-rating="3.5"></div>
-                                <h3>Tom's Restaurant</h3>
-                                <span>964 School Street, New York</span>
+                                <h3><?php echo $setiap['nama'];?></h3>
+                                <span><?php echo $setiap['alamat']?></span>
                             </div>
-                            <span class="like-icon"></span>
                         </div>
                     </a>
                 </div>
                 <!-- Listing Item / End -->
+                <?php }?>
             </div>
             <!-- Pagination -->
 <!--            <div class="clearfix"></div>-->

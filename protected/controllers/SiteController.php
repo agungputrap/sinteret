@@ -45,13 +45,17 @@ class SiteController extends Controller
 	}
 
 	public function actionPencarian($kota) {
-	 $modelPencarian = new SearchGerejaForm();
-	 $result = $modelPencarian->findGerejaByKota($kota);
-	 $this->layout = '//layouts/main-layout';
-	 $this->render('pencarian',array(
-	        'result'=>$result,
-            'modelSearch'=>$modelPencarian
-        ));
+	    $modelPencarian = new SearchGerejaForm();
+	    $result = $modelPencarian->findGerejaByKota($kota);
+        if(isset($_POST['SearchGerejaForm']) && isset($_POST['cari']))
+        {
+            $this->redirect(Yii::app()->createUrl('site/pencarian', array('kota'=>$_POST['SearchGerejaForm']['kota'])));
+        }
+        $this->layout = '//layouts/main-layout';
+        $this->render('pencarian',array(
+               'result'=>$result,
+               'modelSearch'=>$modelPencarian
+           ));
     }
 	/**
 	 * This is the action to handle external exceptions.
