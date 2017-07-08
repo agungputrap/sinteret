@@ -8,7 +8,7 @@
 ?>
 <!-- Banner
 ================================================== -->
-<div class="main-search-container">
+<div class="main-search-container" id="initFront">
     <div class="main-search-inner">
         <div class="container">
             <div class="row">
@@ -96,3 +96,12 @@
     </div>
 </div>
 <!-- Info Section / End -->
+
+<?php
+  $css = "
+    #initFront {
+        background-image: url(".Yii::app()->baseUrl."/images/back.png);
+    }
+  ";
+  Yii::app()->clientScript->registerCss('myCss', $css);
+?>

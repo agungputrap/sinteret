@@ -65,7 +65,7 @@
                         <div class="listing-item">
                             <img src="<?php echo $imgSource; ?>" alt="">
                             <div class="listing-item-content">
-                                <h3><?php echo $setiap['nama'];?></h3>
+                                <h3><?php echo $setiap['tipe'] . ' ' . $setiap['nama'];?></h3>
                                 <span><?php echo $setiap['alamat']?></span>
                             </div>
                         </div>

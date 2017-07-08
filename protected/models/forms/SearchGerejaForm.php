@@ -19,8 +19,9 @@ class SearchGerejaForm extends CFormModel
     public function findGerejaByKota($kota)
     {
         $sql="
-            select * from gereja
-            where kota ilike '%".$kota."%'
+            select g.*, tg.nama as tipe from gereja g
+            inner join tipe_gereja tg on g.tipe_id = tg.id
+            where g.kota ilike '%".$kota."%'
         ";
         $data = Yii::app()->db->createCommand($sql);
         $rawData = $data->queryAll();
