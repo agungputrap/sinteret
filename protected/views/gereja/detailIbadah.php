@@ -16,17 +16,24 @@ $this->breadcrumbs=array(
 	<div class="fs-inner-container content">
 		<div class="fs-content">
 
-		<section class="listings-container margin-top-30">
-			<!-- Sorting / Layout Switcher -->
-			<div class="row fs-switcher">
-
-				<div class="col-md-6">
-					<!-- Showing Results -->
-					
+			<section class="listings-container margin-top-30">
+				<!-- Sorting / Layout Switcher -->
+				<div class="row fs-listings">
+					<h1><?php echo $model->tipe->nama . ' ' . $model->nama ?></h1>
+					<h4>Depok</h4>
 				</div>
+			</section>
 
-			</div>
-		</section>
+			<section class="listings-container margin-top-30">
+				<div class="row fs-listings">
+					<h3>Jadwal Ibadah</h3>
+					<?php foreach($jadwalIbadah as $jadwal) { ?>
+						<div class="col-lg-12 col-md-12">
+							<?php echo $jadwal->jam_ibadah ?>
+						</div>
+					<?php } ?>
+				</div>
+			</section>
 
 		</div>
 	</div>
@@ -41,3 +48,9 @@ $this->breadcrumbs=array(
 
 	</div>
 </div>
+
+<style>
+	.fs-inner-container{
+		padding-top: 0;
+	}
+</style>

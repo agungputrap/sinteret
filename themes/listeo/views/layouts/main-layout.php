@@ -130,7 +130,7 @@
         <!-- Header / End -->
 
     </header>
-    <div class="container">
+    <div class="header-container">
         <?php echo $content; ?>
     </div>
     <!-- Footer
