@@ -30,5 +30,13 @@ class GerejaController extends Controller
 		$this->render('detailIbadah', $data);
 	}
 
+	public function actionTambah()
+    {
+        $model = new FormGereja();
+        $this->layout = '//layouts/main-layout';
+        $this->render('tambah', array(
+           'model' => $model
+        ));
+    }
 
 }

@@ -8,13 +8,13 @@
 ?>
 <!-- Banner
 ================================================== -->
-<div class="main-search-container" data-background-image="images/main-search-background-01.jpg">
+<div class="main-search-container">
     <div class="main-search-inner">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Find Nearby Attractions</h2>
-                    <h4>Expolore top-rated attractions, activities and more</h4>
+                    <h2>Mencari Informasi Gereja</h2>
+                    <h4>daerah baru tidak jadi penghalang bagi anda untuk beribadah</h4>
                     <?php
                     $form = $this->beginWidget('CActiveForm',array(
                         'id' => 'search-form',
@@ -55,7 +55,7 @@
                                 <img src="<?php echo $setiap['gambar'];?>" alt="">
                                 <div class="listing-item-content">
                                     <h3><?php echo $setiap['nama'];?></h3>
-                                    <span>964 School Street, New York</span>
+                                    <span><?php echo GerejaCustom::getAlamatGereja($setiap['gereja_id']); ?></span>
                                 </div>
                             </div>
                         </a>
@@ -68,3 +68,31 @@
     </div>
 </section>
 <!-- Fullwidth Section / End -->
+
+<!-- Info Section -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="headline centered margin-top-80">
+                Informasi gereja akan terus berkembang
+                <span class="margin-top-25">saat ini kami mengumpulkan sendiri informasi gereja. Anda juga dapat turut serta dalam menambahkan informasi tersebut</span>
+            </h2>
+        </div>
+    </div>
+    <div class="row icons-container">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <div class="icon-box-2">
+                <?php echo CHtml::link('Menambahkan Informasi',array('gereja/tambah'),array('class'=>'button')); ?>
+<!--                <button class="button">Menambahkan Informasi</button>-->
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+<!-- Info Section / End -->

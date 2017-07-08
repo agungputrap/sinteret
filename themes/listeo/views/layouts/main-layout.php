@@ -33,7 +33,7 @@
 
                     <!-- Logo -->
                     <div id="logo">
-                        <a href="index.html"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/logo.png" alt=""></a>
+                        <a href="<?php echo Yii::app()->createUrl('site/index');?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/logo.png" alt=""></a>
                     </div>
 
                     <!-- Mobile Navigation -->
@@ -186,11 +186,11 @@
             </div>
 
             <!-- Copyright -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyrights">© 2017 Listeo. All Rights Reserved.</div>
-                </div>
-            </div>
+<!--            <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                    <div class="copyrights">© 2017 Listeo. All Rights Reserved.</div>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
 
