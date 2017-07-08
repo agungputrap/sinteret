@@ -29,9 +29,12 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-
+        
+        $listCarousel = HistoryGerejaViewCustom::getTopViewedChurches();
         $this->layout = '//layouts/main-layout';
-		$this->render('index');
+		$this->render('index', array(
+		    'listCarousel' => $listCarousel
+        ));
 	}
 
 	/**
