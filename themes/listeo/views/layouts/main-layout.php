@@ -130,9 +130,7 @@
         <!-- Header / End -->
 
     </header>
-    <div class="container">
-        <?php echo $content; ?>
-    </div>
+    <?php echo $content; ?>
     <!-- Footer
     ================================================== -->
     <div id="footer" class="sticky-footer">
