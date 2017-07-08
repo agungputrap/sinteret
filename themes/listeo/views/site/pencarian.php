@@ -78,7 +78,7 @@
 <!--            <div class="clearfix"></div>-->
 <!--            <div class="row">-->
 <!--                <div class="col-md-12">-->
-<!--                    <!-- Pagination -->-->
+
 <!--                    <div class="pagination-container margin-top-20 margin-bottom-40">-->
 <!--                        <nav class="pagination">-->
 <!--                            <ul>-->
