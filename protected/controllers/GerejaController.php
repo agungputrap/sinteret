@@ -32,10 +32,12 @@ class GerejaController extends Controller
 
 	public function actionTambah()
     {
+        $model_tipeGereja = TipeGerejaCustom::model()->findAll(array('order'=>'id asc'));
         $model = new FormGereja();
         $this->layout = '//layouts/main-layout';
         $this->render('tambah', array(
-           'model' => $model
+           'model' => $model,
+            'tipeGereja'=> $model_tipeGereja
         ));
     }
 
