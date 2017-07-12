@@ -43,16 +43,16 @@
 
                     <!-- Main Navigation -->
                     <nav id="navigation" class="style-1">
-                        <?php $this->widget('zii.widgets.CMenu', array(
+                        <?php /*$this->widget('zii.widgets.CMenu', array(
                                 'id'=>'upmenu',
                                 'items'=>array(
-                                    array('label'=>'Home', 'url'=>array('/site/index')),
+                                    array('label'=>'Beranda', 'url'=>array('/site/index')),
                                     array('label'=>'Gereja', 'url'=>'', 'items'=>array(
                                         array('label'=>'Test 1', 'url'=>array('/site/index')),
                                         array('label'=>'Test 2', 'url'=>array('/site/index')),
                                     )),
                                 ),
-                            )) ?>
+                            ))*/ ?>
                         <ul id="responsive">
 
 
@@ -153,10 +153,10 @@
                 <div class="col-md-5 col-sm-6">
                     <img class="footer-logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/logo.png" alt="">
                     <br><br>
-                    <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
+                    <p>Kami merupakan kelompok yang dengan sukarela mengumpulkan dan membagikan informasi gereja dan jadwal ibadah. Kiranya aplikasi ini bisa menjadi berkat bagi sesama</p>
                 </div>
 
-                <div class="col-md-4 col-sm-6 ">
+                <!-- <div class="col-md-4 col-sm-6 ">
                     <h4>Helpful Links</h4>
                     <ul class="footer-links">
                         <li><a href="#">Login</a></li>
@@ -192,7 +192,7 @@
                         <li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
                     </ul>
 
-                </div>
+                </div> -->
 
             </div>
 

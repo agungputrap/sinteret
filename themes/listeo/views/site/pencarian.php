@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                <h2>Listings</h2><span>Grid Layout With Sidebar</span>
+                <h2>Pencarian Gereja</h2><span>berdasarkan kota</span>
 
                 <!-- Breadcrumbs -->
                 <nav id="breadcrumbs">
