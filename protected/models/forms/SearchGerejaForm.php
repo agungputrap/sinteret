@@ -21,7 +21,7 @@ class SearchGerejaForm extends CFormModel
         $sql="
             select g.*, tg.nama as tipe from gereja g
             inner join tipe_gereja tg on g.tipe_id = tg.id
-            where g.kota ilike '%".$kota."%'
+            where g.kota ilike '%".$kota."%' and tampil = true
         ";
         $data = Yii::app()->db->createCommand($sql);
         $rawData = $data->queryAll();
