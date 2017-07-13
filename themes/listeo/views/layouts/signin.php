@@ -16,7 +16,10 @@
         <!-- Login -->
         <div class="tab-content" id="tab1" style="display: none;">
             <p class="text-center">
-                <a href="#" onClick="MyWindow=window.open('http://gemana.dev/site/login?service=google_oauth','MyWindow','width=450,height=380'); return false;">
+                <!-- <a href="#" onClick="MyWindow=window.open('http://gemana.dev/site/login?service=google_oauth','MyWindow','width=450,height=380'); return false;">
+                    <img class="footer-logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/btn-google.png" alt="">
+                </a> -->
+                <a href="#" onClick="MyWindow=window.open('http://localhost/Gemana/site/login?service=google_oauth','MyWindow','width=450,height=380'); return false;">
                     <img class="footer-logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/sources/images/btn-google.png" alt="">
                 </a>
             </p>
