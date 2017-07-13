@@ -1,32 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "gereja".
+ * This is the model class for table "relawan_data".
  *
- * The followings are the available columns in table 'gereja':
- * @property integer $id
- * @property string $nama
- * @property integer $tipe_id
- * @property string $latitude
- * @property string $longitude
- * @property string $kota
- * @property string $alamat
- * @property boolean $tampil
+ * The followings are the available columns in table 'relawan_data':
+ * @property string $id
+ * @property string $email
+ * @property integer $gereja_id
  *
  * The followings are the available model relations:
- * @property HistoryGerejaView[] $historyGerejaViews
- * @property FotoGereja[] $fotoGerejas
- * @property JadwalIbadah[] $jadwalIbadahs
- * @property TipeGereja $tipe
+ * @property Gereja $gereja
  */
-class Gereja extends CActiveRecord
+class RelawanData extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'gereja';
+		return 'relawan_data';
 	}
 
 	/**
@@ -37,13 +29,11 @@ class Gereja extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('tipe_id', 'numerical', 'integerOnly'=>true),
-			array('nama', 'length', 'max'=>50),
-			array('latitude, longitude', 'length', 'max'=>100),
-			array('kota, alamat, tampil', 'safe'),
+			array('gereja_id', 'numerical', 'integerOnly'=>true),
+			array('email', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, tipe_id, latitude, longitude, kota, alamat, tampil', 'safe', 'on'=>'search'),
+			array('id, email, gereja_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,10 +45,7 @@ class Gereja extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'historyGerejaViews' => array(self::HAS_MANY, 'HistoryGerejaView', 'gereja_id'),
-			'fotoGerejas' => array(self::HAS_MANY, 'FotoGereja', 'gereja_id'),
-			'jadwalIbadahs' => array(self::HAS_MANY, 'JadwalIbadah', 'gereja_id'),
-			'tipe' => array(self::BELONGS_TO, 'TipeGereja', 'tipe_id'),
+			'gereja' => array(self::BELONGS_TO, 'Gereja', 'gereja_id'),
 		);
 	}
 
@@ -69,13 +56,8 @@ class Gereja extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nama' => 'Nama',
-			'tipe_id' => 'Tipe',
-			'latitude' => 'Latitude',
-			'longitude' => 'Longitude',
-			'kota' => 'Kota',
-			'alamat' => 'Alamat',
-			'tampil' => 'Tampil',
+			'email' => 'Email',
+			'gereja_id' => 'Gereja',
 		);
 	}
 
@@ -97,14 +79,9 @@ class Gereja extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('tipe_id',$this->tipe_id);
-		$criteria->compare('latitude',$this->latitude,true);
-		$criteria->compare('longitude',$this->longitude,true);
-		$criteria->compare('kota',$this->kota,true);
-		$criteria->compare('alamat',$this->alamat,true);
-		$criteria->compare('tampil',$this->tampil);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('gereja_id',$this->gereja_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -115,7 +92,7 @@ class Gereja extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Gereja the static model class
+	 * @return RelawanData the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -32,10 +32,24 @@ class GerejaController extends Controller
 
 	public function actionTambah()
     {
+        $model_tipeGereja = TipeGerejaCustom::model()->findAll(array('order'=>'id asc'));
         $model = new FormGereja();
+        if(isset($_POST['FormGereja'])&& isset($_POST['submit'])) {
+            $berhasil = $model->simpan($_POST['FormGereja']);
+            if($berhasil)
+                $this->redirect(Yii::app()->createUrl('gereja/konfirmasi'));
+        }
         $this->layout = '//layouts/main-layout';
         $this->render('tambah', array(
-           'model' => $model
+           'model' => $model,
+            'tipeGereja'=> $model_tipeGereja
+        ));
+    }
+
+    public function actionKonfirmasi()
+    {
+        $this->layout = '//layouts/main-layout';
+        $this->render('konfirmasi', array(
         ));
     }
 
