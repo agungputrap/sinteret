@@ -1,7 +1,9 @@
 {
-  "scripts": {
-    "compile": [
-      "chmod -R 777 /app/protected/runtime",
-    ]
-  }
+    "extra": {
+        "heroku": {
+            "compile": [
+                "chmod 777 /app/protected/runtime"
+            ]
+        }
+    }
 }
