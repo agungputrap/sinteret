@@ -15,7 +15,7 @@ class GerejaController extends Controller
 		$model = GerejaCustom::model()->findByPk($id);
 
 		if($model) {
-			$jadwalIbadah = jadwalIbadah::model()->findAllByAttributes(array('gereja_id'=>$model->id));
+			$jadwalIbadah = JadwalIbadah::model()->findAllByAttributes(array('gereja_id'=>$model->id));
 			$fotoGereja = FotoGereja::model()->findAllByAttributes(array('gereja_id'=>$model->id));
 
 			$fileFoto = Yii::app()->baseUrl. '/images/gerejas/' . $fotoGereja[0]->nama_foto;
